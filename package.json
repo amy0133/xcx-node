@@ -1,0 +1,34 @@
+{
+  "name": "xcx-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amy0133/xcx-node.git"
+  },
+  "keywords": [
+    "node",
+    "koa2",
+    "mysql"
+  ],
+  "author": "amy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amy0133/xcx-node/issues"
+  },
+  "homepage": "https://github.com/amy0133/xcx-node",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-etag": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "log4js": "^4.1.0",
+    "mysql": "^2.16.0"
+  }
+}
