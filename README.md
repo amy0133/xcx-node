@@ -14,5 +14,10 @@ nodejs + koa2 + mysql
 - log4js 日志管理
 - mysql 数据库
 
+## 待完成项
++ 安装docker，并接入
++ 测试用例
++ 部署
+
 
 
