@@ -12,6 +12,10 @@ const Koa = require('koa');
 const app = new Koa();
 
 
+// 引入controllers路由集合
+// const Router = require('koa-router');
+
+
 app.listen(global.config.port);
 logger.info('启动服务，端口号为：', global.config.port);
 

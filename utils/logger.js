@@ -11,10 +11,24 @@ log4js.configure({
         // 控制台输出
         console: {
             type: 'console'
+        },
+        // elk 日志配置：https://github.com/log4js-node/log4js-node/blob/master/examples/logstashHTTP.js
+        logstash: {
+            url: 'http://localhost:9200/_bulk',
+            type: '@log4js-node/logstash-http',
+            // type: 'logstashHTTP',
+            logType: 'application',
+            logChannel: 'node',
+            application: 'logstash-log4js',
+            layout: {
+                type: 'pattern',
+                pattern: '%m'
+            }
         }
     },
     categories: {
-        default: { appenders: ['console'], level: 'info' }
+        // default: { appenders: ['console'], level: 'info' }
+        default: { appenders: ['console', 'logstash'], level: 'info' }
     }
 })
 

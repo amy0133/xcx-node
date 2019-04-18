@@ -13,9 +13,22 @@ nodejs + koa2 + mysql
 - koa-router 路由中间件：get/post...
 - log4js 日志管理
 - mysql 数据库
+- docker + elk 收集日志并使用kibana查看日志（http://localhost:5601/）
+
+
+### elk
++ 安装：docker pull sebp/elk
++ 启动 (--name elk 可选)
+```bash
+docker run -it \
+  -p 5601:5601 \
+  -p 9200:9200 \
+  -p 5044:5044 \
+  --name elk sebp/elk
+```
 
 ## 待完成项
-+ 安装docker，并接入
++ 添加路由
 + 测试用例
 + 部署
 

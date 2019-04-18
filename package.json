@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/amy0133/xcx-node",
   "dependencies": {
+    "@log4js-node/logstash-http": "^1.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-compress": "^3.0.0",
