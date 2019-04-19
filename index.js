@@ -19,7 +19,7 @@ const Router = require('koa-router');
     // 读取[root]目录下所有js文件
     fs.readdirSync(root).forEach((filename) => {
         let file = path.parse(filename);
-        logger.info('load router (controllers): ' + filename);
+        logger.info('load router (controller): ' + filename);
         if(file.ext.toLowerCase() !== '.js') return;
         const router = new Router({prefix: `/${file.name}`});
         require(`${root}/${file.name}`)(router);
