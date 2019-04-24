@@ -28,9 +28,10 @@ nodejs + koa2 + mysql
     -p 5044:5044 \
     --name elk sebp/elk
     ```
+## 功能
++ 产品类型，测试一个接口:curl http://localhost:3000/category/findAll
 
 ## 待完成项
-+ 连接数据库
 + 测试用例
 + 部署
 
