@@ -2,9 +2,9 @@
  * @Description: 产品相关接口
  * @Author: amy
  * @Date: 2019-04-25 10:25:30
- * @LastEditTime: 2019-04-25 11:24:40
+ * @LastEditTime: 2019-04-25 16:20:20
  */
-const logger = require('../utils/logger');
+const logger = require('../utils/logger')();
 const ProductModel = require('../models/Product');
 
 class Product {
@@ -14,7 +14,7 @@ class Product {
             let data = await ProductModel.findAllProcucts();
             ctx.response.status = 200;
             ctx.body = {
-                code: 200,
+                code: 0,
                 msg: '操作成功',
                 data
             }
@@ -29,8 +29,23 @@ class Product {
 
     // 新增
     static async create(ctx){
-        logger.info(ctx.request)
-        return true;
+        let params = ctx.request.body;
+        
+        try {
+            let {id} = await ProductModel.create(params);
+            ctx.response.status = 200;
+            ctx.body = {
+                code: 0,
+                msg: '操作成功',
+                data: id
+            }
+        } catch (error) {
+            ctx.response.status = 500;
+            ctx.body = {
+                code: 500,
+                msg: error
+            }
+        }
     }
 }
 

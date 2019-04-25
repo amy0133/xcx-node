@@ -11,6 +11,10 @@ const Koa = require('koa');
 // 创建实例
 const app = new Koa();
 
+const bodyparser = require('koa-bodyparser');
+
+app.use(bodyparser());
+
 // 封装routers
 const fs = require('fs');
 const path = require('path');
