@@ -1,8 +1,8 @@
 /*
- * @Description: 产品种类 接口
+ * @Description: 产品种类 路由
  * @Author: amy
  * @Date: 2019-04-24 16:09:44
- * @LastEditTime: 2019-04-24 17:01:21
+ * @LastEditTime: 2019-04-25 10:53:03
  */
 const Category = require('../services/category');
 
