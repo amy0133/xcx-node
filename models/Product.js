@@ -2,7 +2,7 @@
  * @Description: 产品
  * @Author: amy
  * @Date: 2019-04-25 10:09:09
- * @LastEditTime: 2019-04-25 10:57:16
+ * @LastEditTime: 2019-05-06 15:51:19
  */
 const logger = require('../utils/logger')();
 const db = require('../utils/db');
@@ -79,6 +79,19 @@ class ProductModel {
      */
     static async findAllProcucts(){
         return await Product.findAll();
+    }
+
+    /**
+     * @description: 根据id获取产品详情
+     * @param {number} id
+     * @return: DTO<Product>
+     */
+    static async findProductById(id){
+        return await Product.findOne({
+            where: {
+                id
+            }
+        })
     }
 }
 
